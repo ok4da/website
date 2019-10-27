@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'open-sans', sans-serif;
+}
+
+/* informatie typografie van https://css-tricks.com/adding-stroke-to-web-text/ en https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale */
+
+ h2 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    transform: scaleY(1.65);
+    font-style: italic;
+    -webkit-text-fill-color: yellow;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 3px 2px 0 #999;
+    padding: .2em 0 0 1em;
+}
+
+h3{
+    font-family: 'Roboto', monospace;
+    font-size:1.2em;
+}
+
+/*---- navbar mobile ----*/
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+    font-size: 1em;
+    padding: 0;
+
+}
+
+li {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+}
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+
+nav a {
+    color: aliceblue;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    display: block;
+    float: left;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #24B351;
+    letter-spacing: .15em;
+}
+
+
+#hamburgerlinks {
+    display: none;
+}
+
+
+#hamburger {
+    background-color: coral;
+    border: none;
+    text-align: center;
+    color: white;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    padding: 1em;
+    font-size: 1em;
+    margin 0 0 0 0;
+    transition: .3s;
+
+}
+
+#hamburger:hover {
+    background-color: #24B351;
+}
+
+/*---- navbar desktop ----*/
+@media all and (min-width: 700px) {
+
+
+
+    #hamburger {
+        display: none;
+    }
+
+    #hamburgerlinks {
+        display: flex;
+        border: none;
+
+    }
+}
+
+
+/*---header mobile----*/
+
+
+.overzicht header {
+    background-image: url(images/header.jpeg);
+
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    padding: 0;
+
+}
+
+/*voor animaties https://css-tricks.com/using-multi-step-animations-transitions/ geraadpleegd, en voor mix-blend-mode https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode*/
+header h1 {
+    font-size: 4em;
+    font-family: 'open-sans', sans-serif;
+    text-align: center;
+    padding: 1em 1em 3em;
+    text-shadow: 1px 1px 10px #000, 1px 1px 10px #000;
+    color: yellow;
+    margin: 0;
+    mix-blend-mode: screen;
+    animation-name: comein;
+    animation-duration: 1.5s;
+
+
+
+
+}
+
+@keyframes comein {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    70% {
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+
+/* -------- header tablet --------*/
+
+@media all and (min-width: 700px) {
+    header {
+        height: 60vh;
+    }
+
+    header h1 {
+        padding: 2.5em 0 5.5em 0;
+    }
+}
+
+/*-------- header desktop -------*/
+@media all and (min-width: 1100px) {
+    header {
+        height: 60vh;
+    }
+
+    header h1 {
+        font-size: 5em;
+        padding: 2em 0 3.5em 0;
+    }
+}
+
+/*------ body mobile ------- */
+
+
+
+.overzicht section:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 0 3em 0;
+    font-size: 1em;
+    padding: 0;
+    background-color: lightgray;
+
+
+}
+
+
+
+.overzicht section:first-of-type input[type=text] {
+    border: none;
+    text-align: left;
+    color: #111;
+    padding: 0.5em;
+    font-size: 1em;
+    margin: 1em;
+    right: 0.5em;
+    background-color: white;
+}
+
+.overzicht section:first-of-type h2 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    transform: scaleY(1.65);
+    font-style: italic;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 3px 2px 0 #999;
+    padding: .2em 0 0 1em;
+
+}
+
+
+
+.overzicht section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+    grid-gap: 3em;
+    column-gap: 3em;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0 0 6em 0;
+}
+
+
+.overzicht section:nth-of-type(2) article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: auto;
+    padding-bottom: 1em;
+    background-color: #333;
+    border: 1px solid #d2d2d2;
+    transition: .3s;
+}
+
+.overzicht section:nth-of-type(2) article:hover {
+    transform: translateY(-2%);
+}
+
+.overzicht section:nth-of-type(2) article h3,
+p {
+    padding: 0 1em 0 1em;
+
+}
+
+.overzicht section:nth-of-type(2) article a {
+    text-decoration: none;
+}
+
+.overzicht section:nth-of-type(2) article h3 {
+    color: #efefef;
+    text-shadow: 1px 0 #1b0d00, 2px 0 #1b0d00, 3px 0 #1b0d00, 4px 0 #1b0d00, 5px 0 #1b0d00, 6px 0 #1b0d00, 7px 0 #1b0d00;
+
+}
+
+.overzicht section:nth-of-type(2) article p {
+    color: lightgray;
+}
+
+.overzicht section:nth-of-type(2) article img {
+    width: 24em;
+    height: 17em;
+    margin: auto;
+
+}
+
+
+
+
+/* ------ body desktop ------*/
+@media all and (min-width: 700px) {
+
+    .overzicht section:nth-of-type(2) {
+        padding-left: 4em;
+        padding-right: 5em;
+
+    }
+}
+
+/* ------- body kleine mobiel ---- */
+
+@media all and (max-width: 506px) {
+
+    .overzicht section:first-of-type h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* ------------------- detail pagina ----------------*/
+
+
+
+
+/*---header detail pagina ----*/
+
+
+.detail header {
+    background-image: url(images/hotdogs.jpg);
+
+}
+
+/*------detail pagina main mobile----*/
+
+.detail section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+    grid-gap: 3em;
+    column-gap: 3em;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0 0 2em 0;
+
+
+}
+
+dl:first-of-type{
+    padding:.5em 2em 2em 2em;
+    background-color:lightgoldenrodyellow;
+
+}
+
+dt{
+    font-weight:bold;
+    font-family: 'Roboto', monospace;
+    padding: .8em 0 0 0;
+}
+
+.detail article h2 {
+    padding: 1.5em 1em 1em 1em;
+
+}
+
+
+.detail button {
+    background-color: coral;
+    border: none;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-size: 1em;
+    transition: .3s;
+    width:10em;
+}
+
+.detail button:hover,
+ {
+    background-color: #24B351;
+}
+
+#hiddenform {
+    display: none;
+}
+
+ .detail section:nth-child(3), .detail section:nth-child(4) {
+    text-align: center;
+        margin: auto;
+}
+
+.detail form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 3em 0;
+    width: 20em;
+    align-content: center;
+}
+
+.detail label:not(:first-child) {
+    margin: 1em 0 0 0;
+}
+
+textarea,
+input[type=text],
+input[type=email] {
+    border: 1px solid #a9a9a9;
+}
+
+textarea{
+    margin: 0 0 4em 0;
+}
+
+input:focus:valid {
+    background-color: #BEFFC2;
+
+}
+
+input:focus:invalid {
+    background-color: lightcoral;
+}
+
+
+
+/* ------ detail pagina main desktop tablet ------*/
+@media all and (min-width: 700px) {
+
+    .detail article:nth-child(2), .detail article:nth-child(3){
+    margin:2em 2em 0 2em;
+    }
+
+    .detail section:nth-child(3), .detail section:nth-child(4){
+        width: 60%;
+        padding: 2em 0 3em 0;
+    }
+.detail form {
+    width:30em;
+}
+}
+
+
+
+
+/*----footer-----*/
+
+footer {
+    background-color: #333333;
+    color: #d2d2d2;
+    text-align: center;
+    padding: 3em;
+    margin: 6em 0 0 0;
+    height: 10em;
+    font-size: 0.7em;
+}

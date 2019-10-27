@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foodtruck Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50d86a5afd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <!--- Navlinks hieronder zitten in hamburger menu--->
+            <div id="hamburgerlinks">
+                <li><a href="index.html">Overzicht</a></li>
+                <li><a href="index.html">Evenementen</a></li>
+                <li><a href="index.html">Account</a></li>
+                <li><a href="index.html">Notificaties</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </div>
+            <!--- hieronder is icoon warmee je hamburger menu toggled ---->
+            <button id="hamburger"><i class="fa fa-bars"></i></button>
+        </ul>
+
+
+    </nav>
+
+    <!----- deze section, "overzicht" is om onderscheid te maken tussen de overzichts- en detailpagina----->
+    <section class="overzicht">
+        <header>
+            <h1>Foodtruck Booking</h1>
+        </header>
+
+        <!---------------------main----------->
+
+        <section>
+            <h2>Populaire trucks</h2>
+            <input type="text" placeholder="Zoeken...">
+        </section>
+
+        <section>
+
+            <article>
+                <a href="detail.html">
+                    <img src="images/hotdogs.jpg" alt="Plaatje van een foodtruck">
+                    <h3>HOT Hot dogs</h3>
+                    <p>Amerikaans, hot dogs</p>
+                </a>
+            </article>
+
+            <article>
+                <a href="detail.html">
+                    <img src="images/burgers.jpg" alt="Plaatje van een foodtruck">
+                    <h3>John's Burgers</h3>
+                    <p>Amerikaans, broodjes, burgers</p>
+                </a>
+            </article>
+            <article>
+                <a href="detail.html">
+                    <img src="images/fishenchips.jpg" alt="Plaatje van een foodtruck">
+                    <h3>Charley's Fish&#38;Chips</h3>
+                    <p>Patat, fish and chips</p>
+                </a>
+            </article>
+            <article>
+                <a href="detail.html">
+                    <img src="images/tacos.jpg" alt="Plaatje van een foodtruck">
+                    <h3>Toni's Taco's</h3>
+                    <p>Mexicaans, burrito's, taco's</p>
+                </a>
+            </article>
+            <article>
+                <a href="detail.html">
+                    <img src="images/ijs.jpg" alt="Plaatje van een foodtruck">
+                    <h3>Ollie's IJs</h3>
+                    <p>IJs, schepijs, roomijs</p>
+                </a>
+            </article>
+            <article>
+                <a href="detail.html">
+                    <img src="images/pizza.jpg" alt="Plaatje van een foodtruck">
+                    <h3>Olive Garden</h3>
+                    <p>Italiaans, pizza</p>
+                </a>
+            </article>
+
+
+        </section>
+
+    </section>
+
+    <footer>
+        <p>Foodtruck Booking &copy; Ada Paul</p>
+    </footer>
+    <!----------SCRIPT------->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

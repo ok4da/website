@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foodtruck Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kreon|Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/50d86a5afd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <!--- Navlinks hieronder zitten in hamburger menu--->
+            <div id="hamburgerlinks">
+                <li><a href="index.html">Overzicht</a></li>
+                <li><a href="index.html">Evenementen</a></li>
+                <li><a href="index.html">Account</a></li>
+                <li><a href="index.html">Notificaties</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </div>
+            <!--- hieronder is icoon warmee je hamburger menu toggled ---->
+            <button id="hamburger"><i class="fa fa-bars"></i></button>
+
+        </ul>
+    </nav>
+
+    <section class="detail">
+        <header>
+            <!----- hier is content leeg, maar in de css is een achtergrond image----->
+        </header>
+
+
+        <section>
+            <article>
+                <h2>HOT Hot dog</h2>
+                <p> HOT Hot dogs is in 1973 opgericht, en is al bijna 50 jaar! Over de jaren, kun je je zeker wel voorstellen dat we gespecialiseerd zijn in hot dogs, de <i>hotste</i> hot dogs.</p>
+
+                <p>Wij maken allerlei verschillende soorten hot dogs (ook vegetarische!) maar onze aanrader is dan toch wel echt onze specialiteit, de hotte hot dog.</p>
+
+                <p>Wij zouden het erg leuk vinden voor jullie onze hot dogs te bereiden, boek ons als er interesse is!</p>
+            </article>
+
+            <article>
+                <h3>Informatie</h3>
+                <dl>
+                    <dt>Soort eten</dt>
+                    <dd>Amerikaans, hot dogs</dd>
+
+                    <dt>Prijsklasse</dt>
+                    <dd>€600 per dag</dd>
+
+                    <dt>Evenementen</dt>
+                    <dd>Festivals, verjaardagen, overig</dd>
+
+                    <dt>Capiciteit</dt>
+                    <dd>100 personen per uur</dd>
+
+                </dl>
+            </article>
+
+            <article>
+                <h3>Contact</h3>
+                <dl>
+                    <dt>Adres</dt>
+                    <dd>Marialaan 1768<br>
+                        1111AA Amsterdam</dd>
+
+                    <dt>Telefoonnummer</dt>
+                    <dd>0900 086717</dd>
+
+                    <dt>Emailadres</dt>
+                    <dd>info@hothotdogs.nl</dd>
+
+                </dl>
+            </article>
+
+
+
+
+        </section>
+
+        <section>
+
+            <button id="boekenbtn">Boeken</button>
+
+
+                  <section id="hiddenform">
+
+                <form>
+
+                    <label for="firstname">Voornaam:</label>
+                    <input type="text" name="firstname" id="firstname" required>
+
+                    <label for="surname">Achternaam:</label>
+                    <input type="text" name="surname" id="surname" required>
+
+                    <label for="emailaddress">Emailadres:</label>
+                    <input type="email" name="emailaddress" id="emailaddress" required>
+
+                    <label for="bericht">Bericht (optioneel):</label>
+                    <textarea name="message" rows="10" id="message"> </textarea>
+
+                    <button type="submit">Verstuur</button>
+                </form>
+
+            </section>
+
+
+        </section>
+
+    </section>
+
+
+
+    <footer>
+        <p>Foodtruck Booking &copy; Ada Paul</p>
+    </footer>
+    <!----------SCRIPT------->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
